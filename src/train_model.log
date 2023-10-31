@@ -1,0 +1,209 @@
+18.8s 1 cuda
+19.5s 2 /opt/conda/lib/python3.10/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+19.5s 3 warnings.warn('Lazy modules are a new feature under heavy development '
+32.6s 4 ==========================================================================================
+32.6s 5 Layer (type:depth-idx)                   Output Shape              Param #
+32.6s 6 ==========================================================================================
+32.6s 7 Classifier                               [32, 2]                   --
+32.6s 8 ├─Sequential: 1-1                        [32, 2]                   --
+32.6s 9 │    └─Conv2d: 2-1                       [32, 32, 298, 298]        896
+32.6s 10 │    └─ReLU: 2-2                         [32, 32, 298, 298]        --
+32.6s 11 │    └─Conv2d: 2-3                       [32, 64, 296, 296]        18,496
+32.6s 12 │    └─ReLU: 2-4                         [32, 64, 296, 296]        --
+32.6s 13 │    └─MaxPool2d: 2-5                    [32, 64, 148, 148]        --
+32.6s 14 │    └─Conv2d: 2-6                       [32, 128, 146, 146]       73,856
+32.6s 15 │    └─ReLU: 2-7                         [32, 128, 146, 146]       --
+32.6s 16 │    └─Conv2d: 2-8                       [32, 256, 144, 144]       295,168
+32.6s 17 │    └─ReLU: 2-9                         [32, 256, 144, 144]       --
+32.6s 18 │    └─MaxPool2d: 2-10                   [32, 256, 72, 72]         --
+32.6s 19 │    └─Conv2d: 2-11                      [32, 512, 70, 70]         1,180,160
+32.6s 20 │    └─ReLU: 2-12                        [32, 512, 70, 70]         --
+32.6s 21 │    └─Conv2d: 2-13                      [32, 1024, 68, 68]        4,719,616
+32.6s 22 │    └─Dropout2d: 2-14                   [32, 1024, 68, 68]        --
+32.6s 23 │    └─ReLU: 2-15                        [32, 1024, 68, 68]        --
+32.6s 24 │    └─MaxPool2d: 2-16                   [32, 1024, 34, 34]        --
+32.6s 25 │    └─BatchNorm2d: 2-17                 [32, 1024, 34, 34]        2,048
+32.6s 26 │    └─Conv2d: 2-18                      [32, 128, 34, 34]         131,200
+32.6s 27 │    └─Flatten: 2-19                     [32, 147968]              --
+32.6s 28 │    └─Dropout: 2-20                     [32, 147968]              --
+32.6s 29 │    └─Linear: 2-21                      [32, 256]                 37,880,064
+32.6s 30 │    └─Sigmoid: 2-22                     [32, 256]                 --
+32.6s 31 │    └─Linear: 2-23                      [32, 128]                 32,896
+32.6s 32 │    └─Sigmoid: 2-24                     [32, 128]                 --
+32.6s 33 │    └─Linear: 2-25                      [32, 64]                  8,256
+32.6s 34 │    └─Sigmoid: 2-26                     [32, 64]                  --
+32.6s 35 │    └─Linear: 2-27                      [32, 2]                   130
+32.6s 36 │    └─Softmax: 2-28                     [32, 2]                   --
+32.6s 37 ==========================================================================================
+32.6s 38 Total params: 44,342,786
+32.6s 39 Trainable params: 44,342,786
+32.6s 40 Non-trainable params: 0
+32.6s 41 Total mult-adds (T): 1.19
+32.6s 42 ==========================================================================================
+32.6s 43 Input size (MB): 34.56
+32.6s 44 Forward/backward pass size (MB): 6415.86
+32.6s 45 Params size (MB): 177.37
+32.6s 46 Estimated Total Size (MB): 6627.79
+32.6s 47 ==========================================================================================
+32.6s 48 --------------------Epoch: 1/50--------------------
+213.0s 49 Training Loss: 0.68490
+223.5s 50 Validation Loss: 0.67329
+223.5s 51 --------------------Epoch: 2/50--------------------
+408.2s 52 Training Loss: 0.67696
+419.6s 53 Validation Loss: 0.64884
+419.6s 54 --------------------Epoch: 3/50--------------------
+604.5s 55 Training Loss: 0.60912
+614.6s 56 Validation Loss: 0.74618
+614.6s 57 --------------------Epoch: 4/50--------------------
+799.2s 58 Training Loss: 0.49989
+809.3s 59 Validation Loss: 0.48586
+809.3s 60 --------------------Epoch: 5/50--------------------
+993.7s 61 Training Loss: 0.45521
+1003.9s 62 Validation Loss: 0.67927
+1003.9s 63 --------------------Epoch: 6/50--------------------
+1187.8s 64 Training Loss: 0.42886
+1197.8s 65 Validation Loss: 0.54708
+1197.8s 66 --------------------Epoch: 7/50--------------------
+1381.3s 67 Training Loss: 0.42132
+1391.3s 68 Validation Loss: 0.50889
+1391.3s 69 --------------------Epoch: 8/50--------------------
+1574.5s 70 Training Loss: 0.40106
+1584.5s 71 Validation Loss: 0.38234
+1584.5s 72 --------------------Epoch: 9/50--------------------
+1768.1s 73 Training Loss: 0.38279
+1778.1s 74 Validation Loss: 0.76594
+1778.1s 75 --------------------Epoch: 10/50--------------------
+1961.7s 76 Training Loss: 0.37304
+1971.7s 77 Validation Loss: 0.38888
+1971.7s 78 --------------------Epoch: 11/50--------------------
+2155.4s 79 Training Loss: 0.37304
+2165.4s 80 Validation Loss: 0.36902
+2165.4s 81 --------------------Epoch: 12/50--------------------
+2349.3s 82 Training Loss: 0.36211
+2359.4s 83 Validation Loss: 0.49370
+2359.4s 84 --------------------Epoch: 13/50--------------------
+2543.1s 85 Training Loss: 0.35082
+2553.2s 86 Validation Loss: 0.34777
+2553.2s 87 --------------------Epoch: 14/50--------------------
+2737.1s 88 Training Loss: 0.34589
+2747.2s 89 Validation Loss: 0.34114
+2747.2s 90 --------------------Epoch: 15/50--------------------
+2931.1s 91 Training Loss: 0.34060
+2941.1s 92 Validation Loss: 0.55135
+2941.1s 93 --------------------Epoch: 16/50--------------------
+3125.2s 94 Training Loss: 0.33906
+3135.2s 95 Validation Loss: 0.36464
+3135.2s 96 --------------------Epoch: 17/50--------------------
+3319.4s 97 Training Loss: 0.33619
+3329.4s 98 Validation Loss: 0.32766
+3329.4s 99 --------------------Epoch: 18/50--------------------
+3513.6s 100 Training Loss: 0.33163
+3523.6s 101 Validation Loss: 0.46508
+3523.6s 102 --------------------Epoch: 19/50--------------------
+3707.8s 103 Training Loss: 0.32736
+3717.8s 104 Validation Loss: 0.32911
+3717.8s 105 --------------------Epoch: 20/50--------------------
+3902.1s 106 Training Loss: 0.32765
+3912.2s 107 Validation Loss: 0.32715
+3912.2s 108 --------------------Epoch: 21/50--------------------
+4096.4s 109 Training Loss: 0.32568
+4106.5s 110 Validation Loss: 0.32588
+4106.5s 111 --------------------Epoch: 22/50--------------------
+4290.7s 112 Training Loss: 0.32480
+4300.8s 113 Validation Loss: 0.32492
+4300.8s 114 --------------------Epoch: 23/50--------------------
+4484.9s 115 Training Loss: 0.32568
+4494.9s 116 Validation Loss: 0.32838
+4494.9s 117 --------------------Epoch: 24/50--------------------
+4679.3s 118 Training Loss: 0.32511
+4689.2s 119 Validation Loss: 0.32589
+4689.2s 120 --------------------Epoch: 25/50--------------------
+4873.4s 121 Training Loss: 0.32575
+4883.4s 122 Validation Loss: 0.32472
+4883.4s 123 --------------------Epoch: 26/50--------------------
+5067.8s 124 Training Loss: 0.32444
+5077.8s 125 Validation Loss: 0.32481
+5077.8s 126 --------------------Epoch: 27/50--------------------
+5262.0s 127 Training Loss: 0.32434
+5272.0s 128 Validation Loss: 0.32454
+5272.0s 129 --------------------Epoch: 28/50--------------------
+5456.3s 130 Training Loss: 0.32411
+5466.4s 131 Validation Loss: 0.32448
+5466.4s 132 --------------------Epoch: 29/50--------------------
+5650.9s 133 Training Loss: 0.32406
+5661.1s 134 Validation Loss: 0.32448
+5661.1s 135 --------------------Epoch: 30/50--------------------
+5845.3s 136 Training Loss: 0.32419
+5855.6s 137 Validation Loss: 0.32568
+5855.6s 138 --------------------Epoch: 31/50--------------------
+6039.9s 139 Training Loss: 0.32410
+6050.0s 140 Validation Loss: 0.32445
+6050.0s 141 --------------------Epoch: 32/50--------------------
+6234.4s 142 Training Loss: 0.32403
+6244.4s 143 Validation Loss: 0.33308
+6244.4s 144 --------------------Epoch: 33/50--------------------
+6428.7s 145 Training Loss: 0.32428
+6438.7s 146 Validation Loss: 0.32446
+6438.7s 147 --------------------Epoch: 34/50--------------------
+6623.0s 148 Training Loss: 0.32760
+6633.0s 149 Validation Loss: 0.32610
+6633.0s 150 --------------------Epoch: 35/50--------------------
+6817.4s 151 Training Loss: 0.32536
+6827.4s 152 Validation Loss: 0.32560
+6827.4s 153 --------------------Epoch: 36/50--------------------
+7011.7s 154 Training Loss: 0.32407
+7021.7s 155 Validation Loss: 0.32726
+7021.7s 156 --------------------Epoch: 37/50--------------------
+7205.9s 157 Training Loss: 0.32397
+7216.1s 158 Validation Loss: 0.32466
+7216.1s 159 --------------------Epoch: 38/50--------------------
+7400.4s 160 Training Loss: 0.32399
+7410.6s 161 Validation Loss: 0.32490
+7410.6s 162 --------------------Epoch: 39/50--------------------
+7594.9s 163 Training Loss: 0.32578
+7604.9s 164 Validation Loss: 0.32649
+7604.9s 165 --------------------Epoch: 40/50--------------------
+7789.2s 166 Training Loss: 0.32396
+7799.2s 167 Validation Loss: 0.32445
+7799.2s 168 --------------------Epoch: 41/50--------------------
+7983.4s 169 Training Loss: 0.32390
+7993.4s 170 Validation Loss: 0.32447
+7993.4s 171 --------------------Epoch: 42/50--------------------
+8177.6s 172 Training Loss: 0.32401
+8187.5s 173 Validation Loss: 0.32500
+8187.5s 174 --------------------Epoch: 43/50--------------------
+8371.6s 175 Training Loss: 0.32378
+8381.6s 176 Validation Loss: 0.32458
+8381.6s 177 --------------------Epoch: 44/50--------------------
+8565.8s 178 Training Loss: 0.32378
+8576.0s 179 Validation Loss: 0.32465
+8576.0s 180 --------------------Epoch: 45/50--------------------
+8760.3s 181 Training Loss: 0.32370
+8770.4s 182 Validation Loss: 0.32442
+8770.4s 183 --------------------Epoch: 46/50--------------------
+8954.8s 184 Training Loss: 0.32365
+8964.7s 185 Validation Loss: 0.32502
+8964.7s 186 --------------------Epoch: 47/50--------------------
+9149.1s 187 Training Loss: 0.32390
+9159.1s 188 Validation Loss: 0.34809
+9159.1s 189 --------------------Epoch: 48/50--------------------
+9343.4s 190 Training Loss: 0.32383
+9353.4s 191 Validation Loss: 0.32430
+9353.4s 192 --------------------Epoch: 49/50--------------------
+9537.7s 193 Training Loss: 0.32369
+9547.7s 194 Validation Loss: 0.32429
+9547.7s 195 --------------------Epoch: 50/50--------------------
+9732.0s 196 Training Loss: 0.32375
+9742.0s 197 Validation Loss: 0.32428
+9747.9s 198 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:2930: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+9747.9s 199 warn(
+9747.9s 200 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+9747.9s 201 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+9748.4s 202 [NbConvertApp] Writing 56740 bytes to __notebook__.ipynb
+9750.0s 203 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:2930: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+9750.0s 204 warn(
+9750.0s 205 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+9750.1s 206 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+9751.1s 207 [NbConvertApp] Support files will be in __results___files/
+9751.1s 208 [NbConvertApp] Making directory __results___files
+9751.1s 209 [NbConvertApp] Writing 310689 bytes to __results__.html
